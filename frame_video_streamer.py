@@ -132,17 +132,6 @@ end
         """Orchestrates the streaming workflow."""
         try:
             await self.frame.connect()
-            # The print response handler is useful for debugging, as it prints all responses
-            # from the Frame device, including errors from the Lua script.
-            # However, it makes the terminal output very noisy with confirmation messages ('1', 'nil').
-            # We'll disable it for a cleaner experience in the final script.
-            # To re-enable for debugging, uncomment the following line:
-            # self.frame.attach_print_response_handler()
-
-            # We are removing the screen clearing command. The correct API call is unknown,
-            # and the first frame of the video will overwrite the entire display anyway,
-            # making a dedicated clear command redundant.
-            
             if force_upload:
                 await self._upload_lua_app()
                 # We need to wait a bit for the app to be ready before starting it.
