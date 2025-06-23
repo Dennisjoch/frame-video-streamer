@@ -1,0 +1,23 @@
+# Video files
+*.mp4
+*.mov
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE configuration files
+.vscode/
+.idea/
+
+# Temp files
+tmp/ 

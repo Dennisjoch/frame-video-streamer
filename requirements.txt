@@ -1,0 +1,5 @@
+frame-msg
+opencv-python
+numpy
+Pillow
+bleak 
